@@ -70,6 +70,9 @@
             [[AVSpeechUtterance alloc] initWithString:self.speechStrings[i]];
         utterance.voice = self.voices[i % 2];
         utterance.rate = 0.5f;
+        // TODO :
+        // baseline的意义
+        // The baseline pitch at which the speech synthesizer speaks the utterance.
         utterance.pitchMultiplier = 0.8f;
         utterance.postUtteranceDelay = 0.1f;
         [self.synthesizer speakUtterance:utterance];
